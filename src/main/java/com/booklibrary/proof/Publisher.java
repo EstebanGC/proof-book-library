@@ -1,6 +1,8 @@
 package com.booklibrary.proof;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Publisher {
     private String name;
     private String address;

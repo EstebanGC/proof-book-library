@@ -12,7 +12,6 @@ public class Book {
     public Book(Author author, Publisher publisher) {
         this.author = author;
         this.publisher = publisher;
-
     }
 
     public String getTitle() {

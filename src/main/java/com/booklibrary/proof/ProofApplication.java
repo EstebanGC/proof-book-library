@@ -12,7 +12,7 @@ public class ProofApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProofApplication.class, args);
 
-		try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BookConfig.class)) {
+		try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BookConfig.class, AuthorConfig.class, PublisherConfig.class)) {
 			Book printBook = context.getBean("printBook", Book.class);
 			Book ebook = context.getBean("ebook", Book.class);
 
