@@ -1,16 +1,18 @@
 package com.booklibrary.proof;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Book {
     private String title;
     private Author author;
     private Publisher publisher;
     private String type;
 
-    public Book(String title, Author author, Publisher publisher, String type) {
-        this.title = title;
+    public Book(Author author, Publisher publisher) {
         this.author = author;
         this.publisher = publisher;
-        this.type = type;
+
     }
 
     public String getTitle() {
@@ -38,6 +40,10 @@ public class Book {
     }
 
     public String getBookType() {
+        return type;
+    }
+
+    public String getType() {
         return type;
     }
 

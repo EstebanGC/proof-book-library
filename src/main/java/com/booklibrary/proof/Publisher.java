@@ -6,11 +6,6 @@ public class Publisher {
     private String address;
     private String foundedYear;
 
-    public Publisher(String name, String address, String foundedYear) {
-        this.name = name;
-        this.address = address;
-        this.foundedYear = foundedYear;
-    }
 
     public String getName() {
         return name;

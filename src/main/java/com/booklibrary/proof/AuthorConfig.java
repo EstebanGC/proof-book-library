@@ -1,6 +1,7 @@
 package com.booklibrary.proof;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 public class AuthorConfig {
     @Bean
     public Author johnDoe() {
-        return new Author("John Doe");
+        Author author = new Author();
+        author.setName("John Doe");
+        return author;
     }
 }

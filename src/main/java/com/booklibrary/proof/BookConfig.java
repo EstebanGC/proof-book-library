@@ -8,19 +8,19 @@ import org.springframework.context.annotation.Configuration;
 public class BookConfig {
 
     @Autowired
-    private Author author;
+    private Author johnDoe;
 
     @Autowired
-    private Publisher publisher;
+    private Publisher springPublishingHouse;
 
     @Bean(name = "printBook")
     public Book printBook() {
-        return new Book("The adventures of Spring(Print Edition)", author, publisher,  "Print");
+        return new Book( johnDoe, springPublishingHouse);
     }
 
     @Bean(name = "ebook")
     public Book ebook() {
-        return new Book("The Adventures of Spring(E-book Edition)", author, publisher, "E-book");
+        return new Book( johnDoe, springPublishingHouse);
     }
 }
 
